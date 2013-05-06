@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/branch14/rocra.png?branch=master)](https://travis-ci.org/branch14/rocra)
+
      _ __ ___   ___ _ __ __ _
     | '__/ _ \ / __| '__/ _` |
     | | | (_) | (__| | | (_| |
