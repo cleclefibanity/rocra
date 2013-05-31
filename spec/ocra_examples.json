@@ -1,0 +1,80 @@
+// `question` is in decimal and needs to be converted to a hex string
+// `shared_secret` is a hex string already
+
+{ 'examplegroups': [
+
+  { 'description':   'should work for OCRA-1:HOTP-SHA1-6:QN08',
+    'suite':         'OCRA-1:HOTP-SHA1-6:QN08',
+    'shared_secret': '3132333435363738393031323334353637383930',
+    'examples': [
+      { 'response': '237653', 'question': '00000000' },
+      { 'response': '243178', 'question': '11111111' },
+      { 'response': '653583', 'question': '22222222' },
+      { 'response': '740991', 'question': '33333333' },
+      { 'response': '608993', 'question': '44444444' },
+      { 'response': '388898', 'question': '55555555' },
+      { 'response': '816933', 'question': '66666666' },
+      { 'response': '224598', 'question': '77777777' },
+      { 'response': '750600', 'question': '88888888' },
+      { 'response': '294470', 'question': '99999999' }
+    ] },
+
+  { 'description':   'should work for OCRA-1:HOTP-SHA256-8:C-QN08-PSHA1',
+    'suite':         'OCRA-1:HOTP-SHA256-8:C-QN08-PSHA1',
+    'shared_secret': '3132333435363738393031323334353637383930313233343536373839303132',
+    'question':      '12345678',
+    'password_hash': '7110eda4d09e062aa5e4a390b0a572ac0d2c0220',
+    'examples': [
+      { 'response': '65347737', 'counter': '0' },
+      { 'response': '86775851', 'counter': '1' },
+      { 'response': '78192410', 'counter': '2' },
+      { 'response': '71565254', 'counter': '3' },
+      { 'response': '10104329', 'counter': '4' },
+      { 'response': '65983500', 'counter': '5' },
+      { 'response': '70069104', 'counter': '6' },
+      { 'response': '91771096', 'counter': '7' },
+      { 'response': '75011558', 'counter': '8' },
+      { 'response': '08522129', 'counter': '9' }
+    ] },
+
+  { 'description': 'should work for OCRA-1:HOTP-SHA256-8:QN08-PSHA1',
+    'suite': 'OCRA-1:HOTP-SHA256-8:QN08-PSHA1',
+    'shared_secret': '3132333435363738393031323334353637383930313233343536373839303132',
+    'password_hash': '7110eda4d09e062aa5e4a390b0a572ac0d2c0220',
+    'examples': [
+      { 'response': "83238735", 'question': '00000000' },
+      { 'response': "01501458", 'question': '11111111' },
+      { 'response': "17957585", 'question': '22222222' },
+      { 'response': "86776967", 'question': '33333333' },
+      { 'response': "86807031", 'question': '44444444' }
+    ] }
+
+  { 'description':   'should work for OCRA-1:HOTP-SHA512-8:C-QN08',
+    'suite':         'OCRA-1:HOTP-SHA512-8:C-QN08',
+    'shared_secret': '31323334353637383930313233343536373839303132333435363738393031323334353637383930313233343536373839303132333435363738393031323334',
+    'examples': [
+      { 'counter': "00000", 'question': "00000000", 'response': "07016083" },
+      { 'counter': "00001", 'question': "11111111", 'response': "63947962" },
+      { 'counter': "00002", 'question': "22222222", 'response': "70123924" },
+      { 'counter': "00003", 'question': "33333333", 'response': "25341727" },
+      { 'counter': "00004", 'question': "44444444", 'response': "33203315" },
+      { 'counter': "00005", 'question': "55555555", 'response': "34205738" },
+      { 'counter': "00006", 'question': "66666666", 'response': "44343969" },
+      { 'counter': "00007", 'question': "77777777", 'response': "51946085" },
+      { 'counter': "00008", 'question': "88888888", 'response': "20403879" },
+      { 'counter': "00009", 'question': "99999999", 'response': "31409299" }
+    ] },
+
+  { 'description': 'should work for OCRA-1:HOTP-SHA512-8:QN08-T1M',
+    'suite':       'OCRA-1:HOTP-SHA512-8:QN08-T1M',
+    'timestamp':   '132d0b6',
+    'shared_secret': '31323334353637383930313233343536373839303132333435363738393031323334353637383930313233343536373839303132333435363738393031323334',
+    'examples': [
+      { 'question': "00000000", 'response': '95209754' },
+      { 'question': "11111111", 'response': '55907591' },
+      { 'question': "22222222", 'response': '22048402' },
+      { 'question': "33333333", 'response': '24218844' },
+      { 'question': "44444444", 'response': '36209546' }
+    ] }
+
+]}
