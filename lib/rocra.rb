@@ -65,17 +65,17 @@ class Rocra
 
       # Password
       if dataInput.include?("psha1")
-        password = password.ljust(40, '0')
+        password = password.rjust(40, '0')
         password_length = 20
       end
 
       if dataInput.include?("psha256")
-        password = password.ljust(64, '0')
+        password = password.rjust(64, '0')
         password_length = 32
       end
 
       if dataInput.include?("psha512")
-        password = password.ljust(128, '0')
+        password = password.rjust(128, '0')
         password_length = 64
       end
 
