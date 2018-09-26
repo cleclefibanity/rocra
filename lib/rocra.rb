@@ -195,7 +195,7 @@ class Rocra
     # @param String text       the message or text to be authenticated.
     #
     def hmac_sha1(crypto, keyBytes, text)
-      digest = OpenSSL::Digest::Digest.new(crypto)
+      digest = OpenSSL::Digest.new(crypto)
       str2hex(OpenSSL::HMAC.digest(digest, keyBytes, text))
     end
 
