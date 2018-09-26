@@ -81,22 +81,22 @@ class Rocra
 
       # session_information
       if dataInput.include?("s064")
-        session_information = session_information.ljust(128, '0')
+        session_information = session_information.rjust(128, '0')
         session_information_length = 64
       end
 
       if dataInput.include?("s128")
-        session_information = session_information.ljust(256, '0')
+        session_information = session_information.rjust(256, '0')
         session_information_length = 128
       end
 
       if dataInput.include?("s256")
-        session_information = session_information.ljust(512, '0')
+        session_information = session_information.rjust(512, '0')
         session_information_length = 256
       end
 
       if dataInput.include?("s512")
-        session_information = session_information.ljust(128, '0')
+        session_information = session_information.rjust(128, '0')
         session_information_length = 64
       end
 
